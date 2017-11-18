@@ -1,0 +1,72 @@
+<html>
+
+<head>
+	<title> Auto Album Sorting </title>
+	<link rel="stylesheet" href="mainStyle.css">
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '145339579555302',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+  
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<table id="t01">
+		<tr>
+			<th id="t01" > <img class="card-img-top item-img" src="camera_icon.png" width="50"> </th>
+			<th id="t02" > <a href="user_interface.ejs"> <font color="white">Home</font> </a> </th>
+			<th id="t03" > <a href="table.html"> <font color="white">Upload New Photo</font> </a> </th>
+			<th id="t04" > <a href="table.html"> <font color="white">Add New Person</font> </a> </th>
+		</tr>
+	</table>
+	
+	<br>
+	
+	<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+	
+	<div>
+		<p><strong><font size="5">Albums</font></strong></p>
+	</div>
+	
+	<!-- If statement to detect availability of the album
+	<div class="row">
+		<div class="col-3">x1</div>
+		<div class="col-3">x2</div>
+		<div class="col-3">x3</div>
+		<div class="col-3">x4</div>
+	</div>
+	-->
+	
+	<!-- Else statement -->
+	<br><br><br><br><br><br><br><br>
+	
+	<div>
+		<table width= "100%">
+			<tr>
+				<th> <img class="no-album-img" src="photo_album_icon.jpg" width="100" id="i01"> </th>
+			</tr>
+			<tr>
+				<th> <strong><font size="4" id="f01">No Available Album</font></strong> </th>
+			</tr>
+		</table>
+	</div>
+	
+</body>
+
+</html>
